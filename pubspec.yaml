@@ -1,7 +1,7 @@
 name: share_plugin
 description: Share to System,
 version: 0.0.1
-homepage:
+homepage: https://github.com/onestravel/SharePlugin.git
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
