@@ -1,4 +1,4 @@
-library share_plugin;
+library share_plugin_plus;
 
 import 'share_plugin_platform_interface.dart';
 

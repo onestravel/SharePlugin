@@ -1,4 +1,4 @@
-part of share_plugin;
+part of share_plugin_plus;
 
 class ShareResult {
   int status = 0;

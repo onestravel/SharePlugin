@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  _shareImpl() async {
+  void _shareImpl() async {
     var text = "This is a piece of text used to test the share function";
     var result = await SharePlugin.share(text, ShareType.TEXT);
     if (kDebugMode) {

@@ -1,6 +1,6 @@
-name: share_plugin
-description: Share to System,
-version: 0.0.1
+name: share_plugin_plus
+description: Share to Android System,
+version: 0.0.2
 homepage: https://github.com/onestravel/SharePlugin.git
 
 environment:

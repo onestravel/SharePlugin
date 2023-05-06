@@ -1,15 +1,42 @@
 # share_plugin
 
-Share to System,
+A flutter plugin Share to Android System,
 
-## Getting Started
+## Installing
+  * Add ```share_plugin_plus: ^0.0.2``` to your pubspec.yaml
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Usage 
+* share Text
+```dart
+  void shareTextImpl() async {
+  var text = "This is a piece of text used to test the share function";
+  var result = await SharePlugin.share(text, ShareType.TEXT);
+  if (kDebugMode) {
+    print('share result status is ${result.status},share platform is ${result.platform}');
+  }
+}
+```
+* share Image
+```dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  void shareImageImpl() async {
+  var imagePath = "sdcard/image_1.jpg";
+  var result = await SharePlugin.share(imagePath, ShareType.IMAGE);
+  if (kDebugMode) {
+    print('share result status is ${result.status},share platform is ${result.platform}');
+  }
+}
+```
+
+* share File
+```dart
+
+  void shareFileImpl() async {
+  var filePath = "sdcard/aaa.pdf";
+  var result = await SharePlugin.share(filePath, ShareType.FILE);
+  if (kDebugMode) {
+    print('share result status is ${result.status},share platform is ${result.platform}');
+  }
+}
+```
 
