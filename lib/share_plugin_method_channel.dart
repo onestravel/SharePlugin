@@ -1,11 +1,10 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
+part of share_plugin_plus;
 
-import 'share_plugin.dart';
-import 'share_plugin_platform_interface.dart';
 
-/// An implementation of [SharePluginPlatform] that uses method channels.
-class MethodChannelSharePlugin extends SharePluginPlatform {
+
+
+/// An implementation of [_SharePluginPlatform] that uses method channels.
+class _MethodChannelSharePlugin extends _SharePluginPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel = const MethodChannel('cn.onestravel.share.share_plugin');

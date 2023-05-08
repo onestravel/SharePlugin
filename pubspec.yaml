@@ -1,6 +1,6 @@
-name: share_plugin_plus
-description: Share to Android System,
-version: 0.0.2+1
+name: 'share_plugin_plus'
+description: A flutter plugin Share to Android System, And return the shared status and shared platform
+version: 0.0.2+2
 homepage: https://github.com/onestravel/SharePlugin.git
 
 environment:

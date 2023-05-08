@@ -1,8 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:share_plugin/share_plugin.dart';
-import 'package:share_plugin/share_plugin_platform_interface.dart';
+import 'package:share_plugin/share_plugin_plus.dart';
 
 void main() {
   runApp(const MyApp());

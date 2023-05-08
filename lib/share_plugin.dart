@@ -1,13 +1,4 @@
-library share_plugin_plus;
-
-import 'share_plugin_platform_interface.dart';
-
-export 'share_plugin_method_channel.dart' hide MethodChannelSharePlugin;
-export 'share_plugin_platform_interface.dart' hide SharePluginPlatform;
-
-part 'share_type.dart';
-
-part 'share_result.dart';
+part of share_plugin_plus;
 
 class SharePlugin {
   static Future<ShareResult> shareMultiple(List<String>? list, ShareType type, {String sharePanelTitle = "", String? subject = "", String? extraText = ""}) {
@@ -29,6 +20,6 @@ class SharePlugin {
 
   static Future<ShareResult> _shareInner(List<String>? list, ShareType type, {String? sharePanelTitle, String? subject, String? extraText}) async {
     assert(list != null && list.isNotEmpty);
-    return SharePluginPlatform.instance.shareInner(list, type.typeText, sharePanelTitle: sharePanelTitle, subject: subject, extraText: extraText);
+    return _SharePluginPlatform.instance.shareInner(list, type.typeText, sharePanelTitle: sharePanelTitle, subject: subject, extraText: extraText);
   }
 }

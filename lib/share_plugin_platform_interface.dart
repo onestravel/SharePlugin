@@ -1,25 +1,23 @@
-import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+part of share_plugin_plus;
 
-import 'share_plugin.dart';
-import 'share_plugin_method_channel.dart';
 
-abstract class SharePluginPlatform extends PlatformInterface {
+abstract class _SharePluginPlatform extends PlatformInterface {
   /// Constructs a SharePluginPlatform.
-  SharePluginPlatform() : super(token: _token);
+  _SharePluginPlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static SharePluginPlatform _instance = MethodChannelSharePlugin();
+  static _SharePluginPlatform _instance = _MethodChannelSharePlugin();
 
-  /// The default instance of [SharePluginPlatform] to use.
+  /// The default instance of [_SharePluginPlatform] to use.
   ///
-  /// Defaults to [MethodChannelSharePlugin].
-  static SharePluginPlatform get instance => _instance;
+  /// Defaults to [_MethodChannelSharePlugin].
+  static _SharePluginPlatform get instance => _instance;
 
   /// Platform-specific implementations should set this with their own
   /// platform-specific class that extends [SharePluginPlatform] when
   /// they register themselves.
-  static set instance(SharePluginPlatform instance) {
+  static set instance(_SharePluginPlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }
