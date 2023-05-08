@@ -91,9 +91,13 @@ object ShareUtils {
         }
         return try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
-                context.startActivity(Intent.createChooser(intent, title, pi.intentSender))
+                context.startActivity(Intent.createChooser(intent, title, pi.intentSender).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                })
             } else {
-                context.startActivity(Intent.createChooser(intent, title))
+                context.startActivity(Intent.createChooser(intent, title).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                })
                 senderIntent?.let {
                     context.sendBroadcast(it)
                 }
@@ -143,9 +147,13 @@ object ShareUtils {
         }
         return try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
-                context.startActivity(Intent.createChooser(intent, title, pi.intentSender))
+                context.startActivity(Intent.createChooser(intent, title, pi.intentSender).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                })
             } else {
-                context.startActivity(Intent.createChooser(intent, title))
+                context.startActivity(Intent.createChooser(intent, title).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                })
                 senderIntent?.let {
                     context.sendBroadcast(it)
                 }

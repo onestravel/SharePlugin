@@ -17,7 +17,7 @@ class SharePlugin {
 
   static Future<ShareResult> share(String? text, ShareType type, {String sharePanelTitle = "", String subject = "", String extraText = ""}) {
     assert(text?.isNotEmpty ?? true);
-    List<String> list = [text??""];
+    List<String> list = [text ?? ""];
     return _shareInner(
       list,
       type,

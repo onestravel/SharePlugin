@@ -4,7 +4,7 @@ import 'package:share_plugin_plus/share_plugin_method_channel.dart';
 
 void main() {
   MethodChannelSharePlugin platform = MethodChannelSharePlugin();
-  const MethodChannel channel = MethodChannel('share_plugin');
+  const MethodChannel channel = MethodChannel('cn.onestravel.share.share_plugin');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 

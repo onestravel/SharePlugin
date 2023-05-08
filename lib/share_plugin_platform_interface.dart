@@ -23,8 +23,8 @@ abstract class SharePluginPlatform extends PlatformInterface {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }
-  Future<ShareResult> shareInner(List<String>? list, String type, { String? sharePanelTitle, String? subject, String? extraText}){
+
+  Future<ShareResult> shareInner(List<String>? list, String type, {String? sharePanelTitle, String? subject, String? extraText}) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
-
 }

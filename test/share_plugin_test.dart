@@ -4,13 +4,10 @@ import 'package:share_plugin_plus/share_plugin.dart';
 import 'package:share_plugin_plus/share_plugin_platform_interface.dart';
 import 'package:share_plugin_plus/share_plugin_method_channel.dart';
 
-class MockSharePluginPlatform
-    with MockPlatformInterfaceMixin
-    implements SharePluginPlatform {
-
+class MockSharePluginPlatform with MockPlatformInterfaceMixin implements SharePluginPlatform {
   @override
   Future<ShareResult> shareInner(List<String>? list, String type, {String? sharePanelTitle, String? subject, String? extraText}) {
-    return Future.value(ShareResult(1,"test"));
+    return Future.value(ShareResult(1, "test"));
   }
 }
 
